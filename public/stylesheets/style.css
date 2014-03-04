@@ -6,3 +6,13 @@ body {
 a {
   color: #00B7FF;
 }
+
+#userList{
+	margin-top:200px;
+}
+
+.a-name{
+	font-size:12px;
+	margin-top:10px;
+	display:block;
+}

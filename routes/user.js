@@ -3,6 +3,10 @@
  * GET users listing.
  */
 
-exports.list = function(req, res){
-  res.send("respond with a resource");
+exports.listusers = function(db){
+	return function(req, res){
+		db.collection('mindrudan_db').find().toArray(function (err, items){
+			res.json(items);
+		});
+  }
 };
