@@ -13,9 +13,8 @@ function loadUsers(){
 		var userNumber = 0;
 
 		$.each(data, function(){
-			intermediateContent += '<span class="a-name"><i>'+this.Name+'</i></span>';
-
 			userNumber ++;
+			intermediateContent += '<span class="a-name"><i>'+userNumber+'. '+this.Name+'</i></span>';
 		});
 
 		if(userNumber === 0){
