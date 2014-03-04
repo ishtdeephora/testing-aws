@@ -21,10 +21,10 @@ function loadUsers(){
 			userContent += 'there are currently no users.'
 		}
 		else if(userNumber === 1){
-			userContent += 'there is currently <strong>1</strong> user registered:<br/>'
+			userContent += 'there is currently <strong>1</strong> user registered:<br/><br/>'
 		}
 		else{
-			userContent += 'there are currently <strong>'+userNumber+'</strong> users registered:<br/>'
+			userContent += 'there are currently <strong>'+userNumber+'</strong> users registered:<br/><br/>'
 		}
 
 		$('#userList').html(userContent+intermediateContent);
