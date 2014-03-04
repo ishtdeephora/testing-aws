@@ -13,8 +13,11 @@ a {
 
 .a-name{
 	font-size:12px;
-	margin-top:10px;
 	display:block;
+}
+
+.a-name&nth-child(1){
+	margin-top:10px;
 }
 
 #poweredBy{
