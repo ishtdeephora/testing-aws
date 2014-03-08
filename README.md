@@ -1,4 +1,4 @@
 testing-aws
 ===========
 
-Node env.
+Node enviornment.
