@@ -15,6 +15,7 @@
 		@font-size-small: 20px;
 		@font-size-small-ish: 18px;
 		@font-size-very-small:16px;
+		@font-size-tiny:14px;
 		@default-family: 		"SH", "Helvetica Neue", Helvetica, Arial, sans-serif;
 		@default-family-bold: "PNB", "Helvetica Neue", Helvetica, Arial, sans-serif;
 		@heading-family: 		"bb", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -37,9 +38,16 @@
 		@md_dark_gray:			#808080;
 		@md_gray:						#E9E9E9;
 		@md_light_gray:			#FAFAFA;
+		@md_background_gray:#F5F5F5;
 		@md_white:					#F1F1F1;
 		@md_border_gray:		#D5D5D5;
 		@md_rounded_gray:   #D8D8D8;
+		@yo_gray:						#1B1B1B;
+		@yo_text_gray:			#EBEBEB;
+		@vink_blue:					#ECF3F1;
+		@verdo_green:				#77b942;
+		@portal_red:				#a50000;
+		@easytv_green:			#aed137;
 	//end colors
 
 	.border-radius(@radius){
@@ -540,10 +548,86 @@ body{
 	.no-select();
 }
 
-.yo-page{
-	background:@md_gray;
+.third-page{
+	background:@md_white;
+}
 
-	.normal-title, .second-title{
-		border-bottom:@border-size-type @md_dark_gray;
+.project-top-container{
+	font-size:@font-size-medium-small;
+	padding-right: 30px;
+	left: -30px;
+	padding-left:15px;
+	.relative();
+	box-sizing: content-box;
+	padding-top:40px;
+	padding-bottom:40px;
+	margin-top:-30px;
+
+	.project-title{
+		padding-left: 30px;
+		color:@yo_text_gray;
+		border:none;
 	}
+
+	.my-description{
+		font-size:@font-size-very-small;
+	}
+}
+
+.project-link-container{
+	margin-top:15px;
+	font-size:@font-size-tiny;
+
+	a{
+		color:@md_black;
+
+		&:hover{
+			color:@md_dark_gray;
+		}
+	}
+}
+
+.yo-page{
+	background:@yo_gray;
+
+	.normal-title, .second-title, .project-title{
+		border-bottom:@border-size-type @md_black;
+	}
+}
+
+.vink-page{
+	background:@vink_blue;
+
+	.normal-title, .second-title, .project-title{
+		color:@md_black;
+		border-bottom:@border-size-type @md_gray;
+	}
+
+	.project-top-container{
+		.project-title{
+			color:@md_black;
+			border:none;
+		}
+	}
+}
+
+.verdo-page{
+	background:@verdo_green;
+}
+
+.portal-page{
+	background:@portal_red;
+}
+
+.ibog-page{
+	background:@md_background_gray;
+
+	.normal-title, .second-title, .project-title{
+		color:@md_black;
+		border-bottom:@border-size-type @md_gray;
+	}
+}
+
+.easytv-page{
+	background:@easytv_green;
 }
