@@ -1,0 +1,74 @@
+<div class="container container-fluid" data-ng-controller="UserManagementController" data-ng-init="find()">
+	<!-- display users -->
+	<div class="row row-fluid">
+		<div class="page-header">
+			<h1>User list</h1>
+		</div>
+
+		<div class="form-group">
+			<span data-ng-show="error" class="text-danger">
+					<strong>{{error}}</strong>
+			</span>
+			<span data-ng-show="success" class="text-success">
+					<strong>{{success}}</strong>
+			</span>
+		</div>
+
+		<input type="text" ng-model="search.$" class="form-control" placeholder="Search..."><br/>
+
+		<!-- not to self: angular doesn't work well with tables, don't use them. Ever -->
+		<div class="table-lookalike">
+			<!-- table header -->
+			<div class="row row-fluid table-header-text">
+				<span class="col-xs-2">Email</span>
+				<span class="col-xs-2">Username</span>
+				<span class="col-xs-2">Display Name</span>
+				<span class="col-xs-2">Phone</span>
+				<span class="col-xs-2">Actions</span>
+			</div>
+
+			<div ng-model="loadedData" ng-repeat="user in loadedData | filter:search | orderBy:'email'" class="repeat-item">
+				<div ng-switch on="user.editing">
+					<div class="row row-fluid user-row" ng-switch-when="true">
+						<div class="col-xs-2">
+							<!-- the ng-repeat creates either static text or an input for editing, depending on the value of user.editing -->
+							<input type="text" class="form-control" ng-model="user.email">
+						</div>
+						<div class="col-xs-2">
+							<input type="text" class="form-control" ng-model="user.username">
+						</div>
+						<div class="col-xs-2">
+							<input type="text" class="form-control" ng-model="user.displayName">
+						</div>
+						<div class="col-xs-2">
+							<input type="text" class="form-control" ng-model="user.phone">
+						</div>
+						<div class="col-xs-2">
+							<!-- the button changes to save, the delete buttons is hidden -->
+							<span ng-click="update(user)" class="btn btn-success btn-sm">Save</span>
+						</div>
+					</div>
+					<div class="row row-fluid user-row" ng-switch-default>
+						<div class="col-xs-2">
+							<!-- the ng-repeat creates either static text or an input for editing, depending on the value of user.editing -->
+							<span>{{user.email}}</span>
+						</div>
+						<div class="col-xs-2">
+							<span>{{user.username}}</span>
+						</div>
+						<div class="col-xs-2">
+							<span>{{user.displayName}}</span>
+						</div>
+						<div class="col-xs-2">
+							<span>{{user.phone}}</span>
+						</div>
+						<div class="col-xs-2">
+							<span class="btn btn-danger btn-sm" ng-click="remove($index, user)">Delete</span>
+							<span class="btn btn-info btn-sm" ng-click="update(user)">Edit</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

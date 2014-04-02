@@ -1,0 +1,114 @@
+//font declarations
+	@font-face {
+		font-family: 'SH';
+		src: url('../fonts/shruti.eot');
+		src: url('../fonts/shruti.woff') format('woff'), 
+			 url('../fonts/shruti.ttf') format('truetype'), 
+			 url('..fonts/shruti.svg') format('svg');
+		font-weight: normal;
+		font-style: normal;
+	}
+	
+	@font-face {
+	    font-family: 'PN';
+	    src: url('../fonts/pn-webfont.eot');
+	    src: url('../fonts/pn-webfont.eot?#iefix') format('embedded-opentype'),
+	         url('../fonts/pn-webfont.woff') format('woff'),
+	         url('../fonts/pn-webfont.ttf') format('truetype'),
+	         url('../fonts/pn-webfont.svg#proxima_nova_rgregular') format('svg');
+	    font-weight: normal;
+	    font-style: normal;
+
+	}
+
+	@font-face {
+	    font-family: 'PNB';
+	    src: url('../fonts/pnb-webfont.eot');
+	    src: url('../fonts/pnb-webfont.eot?#iefix') format('embedded-opentype'),
+	         url('../fonts/pnb-webfont.woff') format('woff'),
+	         url('../fonts/pnb-webfont.ttf') format('truetype'),
+	         url('../fonts/pnb-webfont.svg#proxima_nova_rgbold') format('svg');
+	    font-weight: normal;
+	    font-style: normal;
+
+	}
+
+	@font-face {
+	    font-family: 'PNL';
+	    src: url('../fonts/pnl-webfont.eot');
+	    src: url('../fonts/pnl-webfont.eot?#iefix') format('embedded-opentype'),
+	         url('../fonts/pnl-webfont.woff') format('woff'),
+	         url('../fonts/pnl-webfont.ttf') format('truetype'),
+	         url('../fonts/pnl-webfont.svg#proxima_novalight') format('svg');
+	    font-weight: normal;
+	    font-style: normal;
+
+	}
+
+	/* semi bold not used yet
+	@font-face {
+	    font-family: 'PNSB';
+	    src: url('../fonts/pnsb-webfont.eot');
+	    src: url('../fonts/pnsb-webfont.eot?#iefix') format('embedded-opentype'),
+	         url('../fonts/pnsb-webfont.woff') format('woff'),
+	         url('../fonts/pnsb-webfont.ttf') format('truetype'),
+	         url('../fonts/pnsb-webfont.svg#proxima_novasemibold') format('svg');
+	    font-weight: normal;
+	    font-style: normal;
+
+	} */
+//end font declarations
+
+.content {
+	margin-top: 50px;
+}
+a.undecorated-link:hover {
+	text-decoration: none;
+}
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+	display: none !important;
+}
+
+/*table styling for users-display*/
+.editing-true{
+	display:inline-block;
+}
+
+.editing-false{
+	display:none;
+}
+
+.disclamer{
+	font-size:11px;
+	text-align:center;
+	color:gray;
+}
+
+.table-header-text{
+	font-size:15px;
+	font-weight:bold;
+	margin-bottom:10px;
+	padding-bottom:10px;
+	border-bottom:1px solid whiteSmoke;
+}
+
+.user-row{
+	padding:8px 0 8px 0;
+	margin:8px 0 8px 0;
+	border-bottom:1px solid whiteSmoke;
+	line-height:30px;
+}
+
+.repeat-item{
+	background:whiteSmoke;
+}
+
+.repeat-item:nth-child(2n+1){
+	background:#ccc;
+}
+
+.repeat-item:hover{
+	background:#aaa;
+	color:white;
+	cursor:default;
+}
