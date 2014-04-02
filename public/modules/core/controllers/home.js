@@ -6,10 +6,10 @@ angular.module('mean.core').controller('HomeController', ['$scope', 'Authenticat
 
 angular.module('mean.core').directive('ProjectLink', ['$location', function($location){
 	return {
-    restrict: "C",
+    restrict: 'C',
     scope: {},
     link: function(scope, element, attrs) {
-    	element.bind("click", function() {
+    	element.bind('click', function() {
       	angular.element(document.querySelector('.main-container')).addClass('fadeout-all');
       	setTimeout(function(){
       		scope.$apply(function() { $location.path(attrs.href); });
@@ -19,3 +19,10 @@ angular.module('mean.core').directive('ProjectLink', ['$location', function($loc
     }
   }
 }]);
+
+angular.module('mean.core').directive('defaultFooter', function(){
+	return{
+		restrict: 'E',
+		templateUrl: 'modules/core/views/default-footer.html'
+	}
+});

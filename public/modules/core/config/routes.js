@@ -29,6 +29,9 @@ angular.module('mean.core').config(['$stateProvider', '$urlRouterProvider', '$lo
 		}).state('easytv', {
 			url: '/projects/easytv',
 			templateUrl: '../modules/core/views/easytv.html'
-		});
+		}).state('about', {
+			url: '/about',
+			templateUrl: '../modules/core/views/about.html'
+		});;
 	}
 ]);
