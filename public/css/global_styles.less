@@ -576,6 +576,14 @@ body{
 	box-sizing:border-box;
 	margin-left: 0;
 
+
+	@media only screen and (max-width:650px){
+		position: static;
+		background: transparent;
+		border: none;
+		padding:10px;
+	}
+
 	@media only screen and (min-width:991px){
 		padding:20px;
 		background:@md_gray;
@@ -642,7 +650,7 @@ body{
 
 .project-top-container{
 	font-size:@font-size-medium-small;
-	padding-right: 30px;
+	padding-right: 45px;
 	left: -30px;
 	padding-left:15px;
 	.relative();
