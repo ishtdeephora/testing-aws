@@ -7,11 +7,13 @@
 		@animation-iteration: infinite;
 		@transition-type: 	ease-in-out;
 		@border-size-type:	1px solid;
+		@font-size-imense: 180px;
 		@font-size-huge: 120px;
 		@font-size-large: 70px;
 		@font-size-medium-large: 58px;
 		@font-size-medium: 45px;
 		@font-size-medium-small: 32px;
+		@font-size-medium-ish: 23px;
 		@font-size-small: 20px;
 		@font-size-small-ish: 18px;
 		@font-size-very-small:16px;
@@ -185,6 +187,10 @@ body{
 		margin-top:200px;
 		font-size: @font-size-huge;
 	}
+
+	@media only screen and (min-width:@large_desktop_breakpoint_min){
+		font-size:@font-size-imense;
+	}
 }
 
 .normal-title{
@@ -195,6 +201,10 @@ body{
 
 	@media only screen and (min-width:@tablet_breakpoint_min){
 		//font-size:@font-size-small;
+	}
+
+	@media only screen and (min-width:@large_desktop_breakpoint_min){
+		font-size:@font-size-medium;
 	}
 }
 
@@ -245,6 +255,10 @@ body{
 	@media only screen and (min-width:@tablet_breakpoint_min){
 		font-size:@font-size-small;
 		margin-top:0px;
+	}
+
+	@media only screen and (min-width:@large_desktop_breakpoint_min){
+		font-size:@font-size-medium-ish;
 	}
 }
 
@@ -304,6 +318,8 @@ body{
 }
 
 .footer-container{
+	height:60px;
+	line-height:50px;
 	margin-top:30px;
 	padding-top:15px;
 	border-top:@border-size-type @md_gray;
@@ -316,8 +332,12 @@ body{
 
 
 .footer-text{
-	font-size:14px;
+	font-size:@font-size-tiny;
 	color:@md_dark_gray;
+
+	@media only screen and (min-width:@large_desktop_breakpoint_min){
+		font-size:@font-size-small-ish;
+	}
 }
 
 .contact-link{
@@ -406,12 +426,22 @@ body{
 	margin-bottom:10px;
 	margin-top:30px;
 	font-size:@font-size-small;
+
+	@media only screen and (min-width:@large_desktop_breakpoint_min){
+		font-size:@font-size-medium;
+		margin-top:50px;
+	}
 }
 
 .about-paragraph, .default-paragraph{
 	max-width:650px;
 	font-family:@body-family;
 	font-size:@font-size-small;
+
+	@media only screen and (min-width:@large_desktop_breakpoint_min){
+		font-size:@font-size-medium-ish;
+		max-width:900px;
+	}
 }
 
 .about-paragraph{
@@ -474,6 +504,16 @@ body{
 	color:@md_black;
 	padding-bottom:40px;
 	border-bottom:@border-size-type @md_gray;
+
+	@media only screen and (min-width:@large_desktop_breakpoint_min){
+		font-size:@font-size-medium-large;
+	}
+}
+
+.about-project-title{
+	@media only screen and (min-width:@large_desktop_breakpoint_min){
+		margin-top:50px;
+	}
 }
 
 .secondary-page-container{
@@ -502,6 +542,11 @@ body{
 	@media only screen and (min-width:991px){
 		text-align:left;
 	}
+
+	@media only screen and (min-width:@large_desktop_breakpoint_min){
+		max-width:300px;
+		font-size:@font-size-small-ish;
+	}
 }
 
 .links-container{
@@ -522,6 +567,16 @@ body{
 		background:@md_gray;
 		max-width:200px;
 	}
+
+	@media only screen and (min-width:@large_desktop_breakpoint_min){
+		padding:20px;
+		max-width:300px;
+		font-size:@font-size-small-ish;
+
+		&:nth-child(1){
+			margin-top:36px;
+		}
+	}
 }
 
 .frontpage-link{
@@ -538,10 +593,15 @@ body{
 }
 
 .project-item{
+	font-family:@default-family;
 	margin-top:30px;
 	padding-bottom:10px;
 	border-bottom:@border-size-type @md_gray;
 	font-size:@font-size-small-ish;
+
+	@media only screen and (min-width:@large_desktop_breakpoint_min){
+		font-size:@font-size-small;
+	}
 }
 
 .large-title{
@@ -550,6 +610,12 @@ body{
 
 .third-page{
 	background:@md_white;
+}
+
+.default-link{
+	@media only screen and (min-width:@large_desktop_breakpoint_min){
+		font-size:@font-size-small;
+	}
 }
 
 .project-top-container{
@@ -571,6 +637,14 @@ body{
 
 	.my-description{
 		font-size:@font-size-very-small;
+	}
+
+	@media only screen and (min-width:@large_desktop_breakpoint_min){
+		margin-bottom:40px;
+
+		.my-description{
+			font-size:@font-size-medium-large;
+		}
 	}
 }
 
