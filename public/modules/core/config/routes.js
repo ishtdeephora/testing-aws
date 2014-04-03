@@ -12,22 +12,22 @@ angular.module('mean.core').config(['$stateProvider', '$urlRouterProvider', '$lo
 			url: '/',
 			templateUrl: 'modules/core/views/home.html'
 		}).state('portal', {
-			url: '/projects/portal',
+			url: '/portal',
 			templateUrl: '../modules/core/views/portal.html'
 		}).state('ibog', {
-			url: '/projects/ibog',
+			url: '/ibog',
 			templateUrl: '../modules/core/views/ibog.html'
 		}).state('yellowoffice', {
-			url: '/projects/yellowoffice',
+			url: '/yellowoffice',
 			templateUrl: '../modules/core/views/yellowoffice.html'
 		}).state('verdo', {
-			url: '/projects/verdo',
+			url: '/verdo',
 			templateUrl: '../modules/core/views/verdo.html'
 		}).state('vink', {
-			url: '/projects/vink',
+			url: '/vink',
 			templateUrl: '../modules/core/views/vink.html'
 		}).state('easytv', {
-			url: '/projects/easytv',
+			url: '/easytv',
 			templateUrl: '../modules/core/views/easytv.html'
 		}).state('about', {
 			url: '/about',
