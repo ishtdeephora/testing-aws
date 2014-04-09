@@ -601,7 +601,25 @@ body{
 	}
 }
 
+.project-item{
+	font-family:@default-family;
+	margin-top:30px;
+	padding-bottom:10px;
+	border-bottom:@border-size-type @md_gray;
+	font-size:@font-size-small-ish;
+
+	@media only screen and (min-width:@large_desktop_breakpoint_min){
+		font-size:@font-size-small;
+	}
+}
+
+.text-project-item{
+	font-family:@body-family;
+}
+
 .frontpage-link{
+	font-size:16px;
+	font-family:@default-family;
 	color:@md_dark_gray;
 
 	&:hover{
@@ -614,17 +632,6 @@ body{
 	padding:0;
 }
 
-.project-item{
-	font-family:@default-family;
-	margin-top:30px;
-	padding-bottom:10px;
-	border-bottom:@border-size-type @md_gray;
-	font-size:@font-size-small-ish;
-
-	@media only screen and (min-width:@large_desktop_breakpoint_min){
-		font-size:@font-size-small;
-	}
-}
 
 .large-title{
 	.no-select();
