@@ -67,6 +67,18 @@
 	    font-style: normal;
 
 	}
+
+@font-face {
+    font-family: 'NEON';
+    src: url('../fonts/monoton-regular-webfont.eot');
+    src: url('../fonts/monoton-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/monoton-regular-webfont.woff') format('woff'),
+         url('../fonts/monoton-regular-webfont.ttf') format('truetype'),
+         url('../fonts/monoton-regular-webfont.svg#neon_lightsregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
 /*
 	@font-face {
 	    font-family: 'PNSB';
