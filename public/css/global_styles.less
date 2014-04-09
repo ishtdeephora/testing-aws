@@ -798,17 +798,15 @@ body{
 .project-item{
 	font-family:@default-family;
 	margin-top:30px;
-	padding-bottom:10px;
-	border-bottom:@border-size-type @md_gray;
+	margin-bottom:50px;
+	padding-left:15px;
+	//border-bottom:@border-size-type @md_gray;
 	//font-size:@font-size-small-ish;
+	border-left:@border-size-type @md_gray;
 
 	@media only screen and (min-width:@large_desktop_breakpoint_min){
 		font-size:@font-size-small;
 	}
-}
-
-.text-project-item{
-	font-family:@body-family;
 }
 
 .frontpage-link{
@@ -829,6 +827,16 @@ body{
 	padding:0;
 }
 
+.project-logo{
+	float: right;
+	max-height: 140px;
+	padding-right: 20px;
+	margin-top: 20px;
+}
+
+.intro-text{
+	margin-bottom:20px;
+}
 
 .large-title{
 	.no-select();
@@ -893,6 +901,10 @@ body{
 			color:@md_dark_gray;
 		}
 	}
+}
+
+.text-project-item{
+	font-family:@body-family;
 }
 
 .yo-page{
