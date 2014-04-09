@@ -26,3 +26,23 @@ angular.module('mean.core').directive('defaultFooter', function(){
 		templateUrl: 'modules/core/views/default-footer.html'
 	}
 });
+
+angular.module('mean.core').directive('autoScrollToContent', ['$anchorScroll', '$location', 'anchorSmoothScroll', function($anchorScroll, $location, anchorSmoothScroll) {
+  return {
+    restrict: 'C',
+    scope: {},
+    link: function(scope, element, attrs) {
+      element.bind("click", function(){
+        //console.log(attrs.location);
+
+        //tell angular about the new hash location
+        //$location.hash(attrs.location);
+        //scroll to it
+        anchorSmoothScroll.scrollTo(attrs.location, 5, 35, true);
+
+        //angular, not animated
+        //$anchorScroll();
+      });
+    }
+  }
+}]);
