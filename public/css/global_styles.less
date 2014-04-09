@@ -20,7 +20,8 @@
 		@font-size-tiny:14px;
 		@default-family: 		"SH", "Helvetica Neue", Helvetica, Arial, sans-serif;
 		@default-family-bold: "PNB", "Helvetica Neue", Helvetica, Arial, sans-serif;
-		@heading-family: 		"bb", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		@light-family: "PNL", "Helvetica Neue", Helvetica, Arial, sans-serif;
+ 		@heading-family: 		"bb", "Helvetica Neue", Helvetica, Arial, sans-serif;
 		@body-family: "gr", "Helvetica Neue", Helvetica, Arial, sans-serif;
 		@helvetica-family:  "Helvetica Neue", Helvetica, Arial, sans-serif;
 
@@ -618,7 +619,7 @@ body{
 	margin-top:30px;
 	padding-bottom:10px;
 	border-bottom:@border-size-type @md_gray;
-	font-size:@font-size-small-ish;
+	//font-size:@font-size-small-ish;
 
 	@media only screen and (min-width:@large_desktop_breakpoint_min){
 		font-size:@font-size-small;
@@ -630,8 +631,11 @@ body{
 }
 
 .frontpage-link{
-	font-size:16px;
-	font-family:@default-family;
+	.show-inline-block();
+	margin:10px 0 10px 0;
+	font-size:@font-size-small-ish;
+	font-family:@light-family;
+	//font-family:@default-family;
 	color:@md_dark_gray;
 
 	&:hover{
