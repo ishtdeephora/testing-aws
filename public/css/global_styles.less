@@ -52,6 +52,18 @@
 		@easytv_green:			#aed137;
 	//end colors
 
+	.border-box{
+		-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+		box-sizing: border-box;         /* Opera/IE 8+ */
+	}
+
+	.content-box{
+		-webkit-box-sizing: content-box; /* Safari/Chrome, other WebKit */
+		-moz-box-sizing: content-box;    /* Firefox, other Gecko */
+		box-sizing: content-box;
+	}
+
 	.border-radius(@radius){
 		-moz-border-radius: @radius;
 		-webkit-border-radius: @radius;
@@ -326,7 +338,7 @@ body{
 	padding-right: 45px;
 	left: -30px;
 	.relative();
-	box-sizing: content-box;
+	.content-box();
 	background:rgba(0, 0, 0, 0.8);
 }
 
@@ -357,7 +369,7 @@ body{
 		padding-left: 15px;
 		left: 45px;
 		position: relative;
-		box-sizing: content-box;
+		.content-box();
 		border-bottom: 1px solid rgb(31, 31, 31);
 		background: rgba(44, 44, 44, 1);
 
@@ -573,7 +585,7 @@ body{
 	width:100%;
 	max-width:none;
 	margin-bottom:10px;
-	box-sizing:border-box;
+	.border-box();
 	margin-left: 0;
 
 
@@ -661,7 +673,7 @@ body{
 	left: -30px;
 	padding-left:15px;
 	.relative();
-	box-sizing: content-box;
+	.content-box();
 	padding-top:40px;
 	padding-bottom:40px;
 	margin-top:-30px;
