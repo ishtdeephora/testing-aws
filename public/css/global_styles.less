@@ -496,7 +496,11 @@ body{
 	width:100%;
 	top:100%;
 	background:@md_light_gray;
-	padding:30px 30px 0 30px;
+	padding: 0px;
+
+	@media only screen and (min-width:500px){
+		padding:30px 30px 0 30px;
+	}
 }
 
 .title-container{
@@ -775,7 +779,8 @@ body{
 		position: static;
 		background: transparent;
 		border: none;
-		padding:10px;
+		padding: 10px 20px 10px;
+		border-left: @border-size-type @md_gray;
 	}
 
 	@media only screen and (min-width:991px){
