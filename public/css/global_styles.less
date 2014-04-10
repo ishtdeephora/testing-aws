@@ -509,16 +509,25 @@ body{
 }
 
 .footer-container{
-	height:60px;
-	line-height:50px;
-	margin-top:30px;
-	padding-top:15px;
-	border-top:@border-size-type @md_gray;
-	padding-right: 45px;
-	left: -30px;
+	height: auto;
+	line-height: 50px;
+	border-top: @border-size-type @md_gray;
+	padding-right: 0;
+	padding-left: 15px;
+	padding-top: 15px;
+	left: 0;
+	position: relative;
 	.relative();
-	.content-box();
 	background:rgba(0, 0, 0, 0.8);
+	.border-box();
+
+	@media only screen and (min-width:500px){
+		height:60px;
+		padding-left: 15px;
+		padding-right: 45px;
+		left: -30px;
+		.content-box();
+	}
 }
 
 
@@ -555,6 +564,11 @@ body{
 		&:nth-child(1){
 			margin-top: 10px;
 		}
+	}
+
+	@media only screen and (max-width:500px){
+		padding-right:0;
+		left:0;
 	}
 }
 
@@ -773,7 +787,6 @@ body{
 	margin-bottom:10px;
 	.border-box();
 	margin-left: 0;
-
 
 	@media only screen and (max-width:650px){
 		position: static;
