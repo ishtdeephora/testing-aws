@@ -32,7 +32,7 @@ angular.module('mean.core').directive('autoScrollToContent', ['$anchorScroll', '
     restrict: 'C',
     scope: {},
     link: function(scope, element, attrs) {
-      element.bind("click", function(){
+      element.bind('click', function(){
         //console.log(attrs.location);
 
         //tell angular about the new hash location
@@ -46,3 +46,21 @@ angular.module('mean.core').directive('autoScrollToContent', ['$anchorScroll', '
     }
   }
 }]);
+
+angular.module('mean.core').directive('enlargableImage', function(){
+  return {
+    restrict: 'C',
+    link: function(scope, element, attrs){
+      element.bind('click', function(){
+        if(element.hasClass('enlarged-image')){
+          element.removeClass('enlarged-image');
+          angular.element(document.querySelector('body')).removeClass('no-scroll');
+        }
+        else{
+          element.addClass('enlarged-image');
+          angular.element(document.querySelector('body')).addClass('no-scroll');
+        }
+      });
+    }
+  }
+});
