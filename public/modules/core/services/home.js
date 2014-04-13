@@ -21,7 +21,7 @@ angular.module('mean.core').service('anchorSmoothScroll', function(){
                 if(i > stopY*0.8)
                 {
                     if(easeOut){
-                        speed += 1;
+                        speed += 0.7;
                     }
                 }
             } return;
