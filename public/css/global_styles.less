@@ -689,7 +689,7 @@ body{
 }
 
 .second-title{
-	margin-top:50px;
+	margin-top:70px;
 }
 
 .image-cover{
@@ -715,6 +715,7 @@ body{
 
 	@media only screen and (min-width:@full_desktop_breakpoint_max){
 		font-size:@font-size-large;
+		padding-top:125px;
 	}
 }
 
@@ -731,7 +732,7 @@ body{
 	font-size:@font-size-medium;
 	color:@md_black;
 	padding-bottom:40px;
-	border-bottom:@border-size-type @md_gray;
+	//border-bottom:@border-size-type @md_gray;
 
 	@media only screen and (min-width:@large_desktop_breakpoint_min){
 		font-size:@font-size-medium-large;
@@ -876,10 +877,10 @@ body{
 }
 
 .other-titles{
-	margin-top:40px;
+	margin-top:70px;
 
 	@media only screen and (min-width:@large_desktop_breakpoint_min){
-		margin-top:60px;
+		margin-top:80px;
 	}
 }
 
@@ -890,9 +891,9 @@ body{
 	padding-left: 0;
 	.relative();
 	.content-box();
-	padding-top:40px;
-	padding-bottom:40px;
-	margin-top:-30px;
+	padding-top: 40px;
+	padding-bottom: 30px;
+	margin-top: -30px;
 
 	.project-title{
 		padding-left: 30px;
@@ -910,8 +911,12 @@ body{
 		padding-left:15px;
 	}
 
+	@media only screen and (min-width:@desktop_breakpoint_min){
+		margin-bottom: 60px;
+	}
+
 	@media only screen and (min-width:@large_desktop_breakpoint_min){
-		margin-bottom:40px;
+		margin-bottom:80px;
 
 		.my-description{
 			font-size:@font-size-medium-ish;
@@ -921,6 +926,7 @@ body{
 
 .project-link-container{
 	margin-top:15px;
+	display: inline-block;
 	font-size:@font-size-tiny;
 
 	a{
@@ -939,8 +945,13 @@ body{
 .yo-page{
 	background:@yo_gray;
 
-	.normal-title, .second-title, .project-title{
+	//.normal-title, .second-title, .project-title{
+	.normal-title, .second-title{
 		border-bottom:@border-size-type @md_black;
+	}
+
+	.default-link, .initial-link{
+		color:@md_white;
 	}
 }
 
@@ -949,6 +960,10 @@ body{
 
 	.normal-title, .second-title, .project-title{
 		color:@md_black;
+	}
+
+	//.normal-title, .second-title, .project-title{
+	.normal-title, .second-title{
 		border-bottom:@border-size-type @md_gray;
 	}
 
@@ -962,10 +977,22 @@ body{
 
 .verdo-page{
 	background:@verdo_green;
+
+	.default-link, .initial-link{
+		color:@md_white;
+
+		&:hover{
+			color:white;
+		}
+	}
 }
 
 .portal-page{
 	background:@portal_red;
+
+	.default-link{
+		color:@md_white;
+	}
 }
 
 .ibog-page{
@@ -973,12 +1000,20 @@ body{
 
 	.normal-title, .second-title, .project-title{
 		color:@md_black;
+	}
+
+	//.normal-title, .second-title, .project-title{
+	.normal-title, .second-title{
 		border-bottom:@border-size-type @md_gray;
 	}
 }
 
 .easytv-page{
 	background:@easytv_green;
+
+	.initial-link{
+		color:@md_white;
+	}
 }
 
 .regular-image{
@@ -1030,7 +1065,7 @@ body{
 }
 
 .ending-links{
-	margin-top:40px;
+	margin-top:70px;
 	padding-bottom:30px;
 	margin-bottom:50px;
 	border-bottom:@border-size-type @md_gray;
@@ -1046,4 +1081,27 @@ body{
 	@media only screen and (min-width:@full_desktop_breakpoint_max){
 		margin-bottom:75px;
 	}
+}
+
+.project-container{
+	@media only screen and (min-width:@desktop_breakpoint_min){
+		width:650px;
+		margin:0 auto;
+		float:none;
+	}
+
+	@media only screen and (min-width:@large_desktop_breakpoint_min){
+		width:900px;
+	}
+}
+
+.about-container{
+	margin-bottom:70px;
+}
+
+.initial-link{
+	margin-left:30px;
+	margin-top: 0px;
+	position: relative;
+	top: -10px;
 }
