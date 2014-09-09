@@ -1,23 +1,27 @@
 'use strict';
 
-angular.module('mean.core').controller('HomeController', ['$scope', 'Authentication', '$rootScope', function ($scope, Authentication, $rootScope) {
+angular.module('mean.core').controller('HomeController', ['$scope', '$state', '$location', 'Authentication', '$rootScope', function ($scope, $state, $location, Authentication, $rootScope) {
     $scope.authentication = Authentication;
+
+    $scope.$on('$stateChangeSuccess',function(){
+        window.scrollTo(0,0);
+    });
 }]);
 
 angular.module('mean.core').directive('ProjectLink', ['$location', function($location){
 	return {
-    restrict: 'C',
-    scope: {},
-    link: function(scope, element, attrs) {
-    	element.bind('click', function() {
-      	angular.element(document.querySelector('.main-container')).addClass('fadeout-all');
-      	setTimeout(function(){
-      		scope.$apply(function() { $location.path(attrs.href); });
-      	}, 500);
-      	event.preventDefault();
-    	});
-    }
-  }
+            restrict: 'C',
+            scope: {},
+            link: function(scope, element, attrs) {
+            	element.bind('click', function() {
+              	angular.element(document.querySelector('.main-container')).addClass('fadeout-all');
+              	setTimeout(function(){
+              		scope.$apply(function() { $location.path(attrs.href); });
+              	}, 500);
+              	event.preventDefault();
+            	});
+            }
+          }
 }]);
 
 angular.module('mean.core').directive('defaultFooter', function(){

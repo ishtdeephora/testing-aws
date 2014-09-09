@@ -60,6 +60,9 @@
 	<link rel="stylesheet" href="/css/common.css">
 	<link rel="stylesheet" href="/css/global_styles.css">
 
+	<!-- External Libaries -->
+	<link rel="stylesheet" href="/lib/animate.css/animate.min.css">
+
 	<!--Application Modules CSS-->
 	{% for modulesCSSFile in modulesCSSFiles %}
 	<link rel="stylesheet" href="{{modulesCSSFile}}">{% endfor %}
@@ -98,6 +101,10 @@
 	<script type="text/javascript">
 		var user = {{ user | json | safe }};
 	</script>
+
+	<!--Application JS-->
+	<script type="text/javascript" src="/lib/wowjs/dist/wow.min.js"></script>
+	<script type="text/javascript" src="/js/custom.js"></script>
 
 	<!--AngularJS-->
 	<script type="text/javascript" src="/lib/angular/angular.js"></script>

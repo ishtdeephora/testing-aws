@@ -32,7 +32,7 @@ angular.module('mean.core').config(['$stateProvider', '$urlRouterProvider', '$lo
 		}).state('about', {
 			url: '/about',
 			templateUrl: '../modules/core/views/about.html'
-		});;
+		});
 
 		$locationProvider.html5Mode(true);
 	}

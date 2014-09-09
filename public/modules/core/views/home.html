@@ -1,112 +1,121 @@
-<section class="main-container" data-ng-controller="HomeController">
+<section class="main-container" data-ng-controller="HomeController" data-ng-init="loadDescription()">
 	<section class="row-fluid first-page">
-	  <section class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-	    <h1 class="large-title">
-	    	Hello
-	    	<span class="my-description">My name's Dan and I am a passionate front-end programmer, meticulous concept developer and natural storyteller</span>
-	    </h1>
-	    <section class="scroll-down-container autoScrollToContent" data-location="second-page">
+	  <section class="front-page-container">
+	  	<section class="front-page-table-display">
+		  	<figure class="my-photo col-xs-12 col-sm-4 col-md-3 animated fadeInUp" data-delay="1s" data-wow-duration="2s">
+		  		<img class="my-photo" src="../img/mindrudan.png" alt="Mindru Dan"/>
+		  	</figure>
+		  	<section class="front-page-text col-xs-12 col-sm-8 col-md-9 animated fadeInUp" data-delay="1s" data-wow-duration="2s">
+			    <h1 class="large-title">
+			    	Hello
+			    	<span class="my-description">My name's Dan and I am a passionate front-end programmer, meticulous concept developer and natural storyteller</span>
+			    </h1>
+			  </section>
+			</section>
+
+			<section class="scroll-down-container autoScrollToContent" data-location="second-page">
 	    	<img class="scroll-down-arrow" src="img/arrow-down.png" alt="Scroll down"/>
 	    </section>
 	  </section>
 	</section>
 
 	<section class="row-fluid second-page" id="second-page">
-		<section class="col-xs-12 col-sm-12 col-md-12 col-lg-12 default-container">
-	    <h2 class="normal-title">Projects made that are dear to my heart</h2>
+		<section class="default-container">
+	    <h2 class="normal-title front-page-title fadeInUp animated">Projects made that are dear to my heart</h2>
 	  </section>
 
-	  <section class="col-xs-12 col-sm-12 col-md-12 col-lg-12 default-container">
-	    <!--<p class="description-text default-paragraph">I am honored to display some of my dearest projects, done with people I admire and appreciate. For some, only prototypes are available, mainly due to legal agreements or access rights. Others can be seen in full glory by visting the live application.</p>-->
-	  </section>
-
+	  <section class="default-container">
 	  <!--projects -->
-	  <figcaption class="col-xs-12 col-sm-6 col-md-4 col-lg-4 title-container projects-container project-1">
-		  <figure href="/portal" class="projects ProjectLink">
-		  	<img class="project-image" src="../img/portal.jpg" alt="Project by Dan Mindru"/>
-		  	<p class="image-cover">Portal</p>
-		  	<span class="project-description">
-			  	iPinion b2b portal<br/>
-			  </span>
-			</figure>
-	  </figcaption>
+		  <figcaption class="col-xs-12 col-sm-12 col-md-6 col-lg-4 title-container projects-container project-1 animated fadeInUp" data-wow-delay="0.5s">
+			  <figure href="/portal" class="projects ProjectLink">
+			  	<img class="project-image" src="../img/portal-01.png" alt="Project by Dan Mindru"/>
+			  	<p class="image-cover">Portal</p>
+			  	<span class="project-description">
+				  	iPinion b2b portal<br/>
+				  </span>
+				</figure>
+		  </figcaption>
 
-	  <figcaption class="col-xs-12 col-sm-6 col-md-4 col-lg-4 title-container projects-container project-2">
-		  <figure href="/ibog" class="projects ProjectLink">
-		  	<img class="project-image" src="../img/ibog.jpg" alt="Project by Dan Mindru"/>
-		  	<p class="image-cover">iBog</p>
-		  	<span class="project-description">
-			  	iBog (iBook)<br/>
-			  </span>
-			</figure>
-	  </figcaption>
+		  <figcaption class="col-xs-12 col-sm-12 col-md-6 col-lg-4 title-container projects-container project-2 animated fadeInUp" data-wow-delay="0.5s">
+			  <figure href="/ibog" class="projects ProjectLink">
+			  	<img class="project-image" src="../img/ibog-01.png" alt="Project by Dan Mindru"/>
+			  	<p class="image-cover">iBog</p>
+			  	<span class="project-description">
+				  	iBog (iBook)<br/>
+				  </span>
+				</figure>
+		  </figcaption>
 
-	  <figcaption class="col-xs-12 col-sm-6 col-md-4 col-lg-4 title-container projects-container project-5">
-	  	<figure href="/vink" class="projects ProjectLink">
-		  	<img class="project-image" src="../img/vink.jpg" alt="Project by Dan Mindru"/>
-		  	<p class="image-cover">Vink</p>
-		  	<span class="project-description">
-			  	Vink Aarhus & Copenhagen<br/>
-			  </span>
-			</figure>
-	  </figcaption>
+		  <figcaption class="col-xs-12 col-sm-12 col-md-6 col-lg-4 title-container projects-container project-5 animated fadeInUp" data-wow-delay="0.5s">
+		  	<figure href="/vink" class="projects ProjectLink">
+			  	<img class="project-image" src="../img/vink-01.png" alt="Project by Dan Mindru"/>
+			  	<p class="image-cover">Vink</p>
+			  	<span class="project-description">
+				  	Vink Aarhus & Copenhagen<br/>
+				  </span>
+				</figure>
+		  </figcaption>
 
-	   <figcaption class="col-xs-12 col-sm-6 col-md-4 col-lg-4 title-container projects-container project-6">
-	  	<figure href="/easytv" class="projects ProjectLink">
-		  	<img class="project-image" src="../img/easytv.jpg" alt="Project by Dan Mindru"/>
-		  	<p class="image-cover">EasyTV</p>
-		  	<span class="project-description">
-		  		EasyTV<br/>
-		  	</span>
-		  </figure>
-	  </figcaption>
+		   <figcaption class="col-xs-12 col-sm-12 col-md-6 col-lg-4 title-container projects-container project-6 animated fadeInUp" data-wow-delay="0.8s">
+		  	<figure href="/easytv" class="projects ProjectLink">
+			  	<img class="project-image" src="../img/easytv-01.png" alt="Project by Dan Mindru"/>
+			  	<p class="image-cover">EasyTV</p>
+			  	<span class="project-description">
+			  		EasyTV<br/>
+			  	</span>
+			  </figure>
+		  </figcaption>
 
-	  <figcaption class="col-xs-12 col-sm-6 col-md-4 col-lg-4 title-container projects-container project-3">
-	  	<figure href="/yellowoffice" class="projects ProjectLink">
-		  	<img class="project-image" src="../img/yellowoffice.jpg" alt="Project by Dan Mindru"/>
-		  	<p class="image-cover">Yellow Office</p>
-		  	<span class="project-description">
-			  	Yellow Office architecture<br/>
-			  </span>
-			</figure>
-	  </figcaption>
+		  <figcaption class="col-xs-12 col-sm-12 col-md-6 col-lg-4 title-container projects-container project-3 animated fadeInUp" data-wow-delay="0.8s">
+		  	<figure href="/yellowoffice" class="projects ProjectLink">
+			  	<img class="project-image" src="../img/yellowoffice-01.png" alt="Project by Dan Mindru"/>
+			  	<p class="image-cover">Yellow Office</p>
+			  	<span class="project-description">
+				  	Yellow Office architecture<br/>
+				  </span>
+				</figure>
+		  </figcaption>
 
-	 	<figcaption class="col-xs-12 col-sm-6 col-md-4 col-lg-4 title-container projects-container project-4">
-	  	<figure href="/verdo" class="projects ProjectLink">
-		  	<img class="project-image" src="../img/verdo.jpg" alt="Project by Dan Mindru"/>
-		  	<p class="image-cover">Verdo</p>
-		  	<span class="project-description">
-			  	Verdo<br/>
-			  </span>
-			</figure>
-	  </figcaption>
+		 	<figcaption class="col-xs-12 col-sm-12 col-md-6 col-lg-4 title-container projects-container project-4 animated fadeInUp" data-wow-delay="0.8s">
+		  	<figure href="/verdo" class="projects ProjectLink">
+			  	<img class="project-image" src="../img/verdo-01.png" alt="Project by Dan Mindru"/>
+			  	<p class="image-cover">Verdo</p>
+			  	<span class="project-description">
+				  	Verdo<br/>
+				  </span>
+				</figure>
+		  </figcaption>
+		</section>
 	  <!-- end projects -->
 
-	  <section class="col-xs-12 col-sm-12 col-md-12 col-lg-12 default-container">
-	    <h2 class="normal-title other-titles">Other work that is dear to my heart</h2>
+	  <section class="default-container">
+	    <h2 class="normal-title front-page-title other-titles">Other work that is dear to my heart</h2>
 	  </section>
-	  <section class="col-xs-12 col-sm-12 col-md-12 col-lg-12 title-container">
-	  	<p class="default-paragraph intro-text">The items in the list below are worth more than my average projects, it's work that has a part of me in them. They cannot really be explained as a project, therefore I offer a short description and a humble link:</p>
-	  	<ul class="project-list">
-	  		<li class="project-item text-project-item">
-	  		  <!--<img class="project-logo" src="../img/fadeitlogo.png" alt="fadeit logo"/>-->
-	  			<p class="default-paragraph"><u>fadeit</u> is a gathering of great minds, being one step ahead of the game. I am in charge of perhaps what is the most challenging and complex brand development I have ever done. Together with the guys at fadeit, I am building the experiences and software of the future.</p>
-	  			<a target="_blank" class="frontpage-link" href="http://fadeit.dk/about">The fadeit website</a>
-	  		</li>
 
-	  		<li class="project-item text-project-item">
-	  			<!--<img class="project-logo" src="../img/becausenobodylogo.png" alt="becausenobody logo"/>-->
-	  			<p class="default-paragraph"><u>becausenobody</u> is my small company. It's probably the place where I learned most in my entire life, a constant source of creative thinking and problem solving, served cold. With it I've done everything from plain logos, brands, games, design concepts, consultancy for all sorts of problems and web applications of all shapes and sizes.</p>
-	  			<a target="_blank" class="frontpage-link" href="http://becausenobody.com">The becausenobody website</a>
-	  		</li>
+	  <section class="default-container">
+		  <section class="col-xs-12 col-sm-12 col-md-12 col-lg-12 title-container">
+		  	<p class="default-paragraph intro-text">The items in the list below are worth more than my average projects, it's work that has a part of me in them. They cannot really be explained as a project, therefore I offer a short description and a humble link:</p>
+		  	<ul class="project-list">
+		  		<li class="project-item text-project-item">
+		  		  <!--<img class="project-logo" src="../img/fadeitlogo.png" alt="fadeit logo"/>-->
+		  			<p class="default-paragraph"><u>fadeit</u> is a gathering of great minds, doing software, web and mobile development. I am in charge of the challenging brand development process and lead designer for out products. Together with the guys at fadeit, I am building the experiences and software of the future.</p>
+		  			<a target="_blank" class="frontpage-link" href="http://fadeit.dk/about">The fadeit website</a>
+		  		</li>
 
-	  		<li class="project-item text-project-item">
-	  			<!--<img class="project-logo" src="../img/givelifelogo.png" alt="givelife logo"/>-->
-	  			<p class="default-paragraph"><u>Givelife</u> was my first project that reached many countries and involved a quite impressive number of people. It was my first attempt to be in front of technology, building a small social media medium that wanted it's users to learn, grow and be smarter. The project is on a break since becausenobody came into the picture, but one day it shall return.</p>
-	  			<a target="_blank" class="frontpage-link" href="http://givelife.dk">The Givelife website</a>
-	  		</li>
-	  	</ul>
-	  </section>
+		  		<li class="project-item text-project-item">
+		  			<!--<img class="project-logo" src="../img/becausenobodylogo.png" alt="becausenobody logo"/>-->
+		  			<p class="default-paragraph"><u>becausenobody</u> is my first company. It's probably the place where I learned most in my entire life, a constant source of creative thinking and problem solving. It's always the place where I look for a new challenge. At becausenobody I've been designing and developing games, web / mobile interfaces, CMS systems, brand manuals, social media campaigns and much more.</p>
+		  			<a target="_blank" class="frontpage-link" href="http://becausenobody.com">The becausenobody website</a>
+		  		</li>
+
+		  		<li class="project-item text-project-item">
+		  			<!--<img class="project-logo" src="../img/givelifelogo.png" alt="givelife logo"/>-->
+		  			<p class="default-paragraph"><u>Givelife</u> was my first project that had international success and got support from quite an impressive amount of people. It was my first attempt to be in front of technology, building a small social media medium that wanted it's users to learn, grow and become better.</p>
+		  			<a target="_blank" class="frontpage-link" href="http://givelife.dk">The Givelife website</a>
+		  		</li>
+		  	</ul>
+		  </section>
+		</section>
 
 	  <default-footer></default-footer>
 	</section>
