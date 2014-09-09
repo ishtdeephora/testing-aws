@@ -1,11 +1,11 @@
  <!-- footer -->
-  <footer class="col-xs-12 col-sm-12 col-md-12 col-lg-12 footer-container">
+  <footer class="col-xs-12 col-sm-12 col-md-12 col-lg-12 footer-container HomeController">
 	  <p class="footer-text">
 	  	Copyright © Dan Mindru 
 	  	<a target="_blank" class="contact-link default-footer-link" href="mailto:mindrudan@gmail.com">mindrudan@gmail.com</a>
 	  	<a target="_blank" class="contact-link default-footer-link" href="http://twitter.com/mindrudan">@mindrudan</a>
-	  	<a class="contact-link default-footer-link" href="about">About</a>
-	  	<a class="contact-link default-footer-link" href="/">Projects</a>
+	  	<a class="contact-link default-footer-link" href="about" ui-route="/about" ng-class="{active: $uiRoute}">About</a>
+	  	<a class="contact-link default-footer-link" href="/" ui-route="/" ng-class="{active: $uiRoute}">Projects</a>
 	  </p>
   </footer>
   <!-- end footer -->
