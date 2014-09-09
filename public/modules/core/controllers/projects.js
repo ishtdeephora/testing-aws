@@ -2,6 +2,7 @@
 
 angular.module('mean.core').controller('ProjectController', ['$scope', 'Authentication', '$rootScope', function ($scope, Authentication, $rootScope) {
     $scope.authentication = Authentication;
+    new WOW().init();
 }]);
 
 angular.module('mean.core').directive('ProjectContainer', ['$location', function($location){

@@ -6,6 +6,8 @@ angular.module('mean.core').controller('HomeController', ['$scope', '$state', '$
     $scope.$on('$stateChangeSuccess',function(){
         window.scrollTo(0,0);
     });
+
+    new WOW().init();
 }]);
 
 angular.module('mean.core').directive('ProjectLink', ['$location', function($location){
@@ -58,11 +60,11 @@ angular.module('mean.core').directive('enlargableImage', function(){
       element.bind('click', function(){
         if(element.hasClass('enlarged-image')){
           element.removeClass('enlarged-image');
-          angular.element(document.querySelector('body')).removeClass('no-scroll');
+          //angular.element(document.querySelector('body')).removeClass('no-scroll');
         }
         else{
           element.addClass('enlarged-image');
-          angular.element(document.querySelector('body')).addClass('no-scroll');
+          //angular.element(document.querySelector('body')).addClass('no-scroll');
         }
       });
     }
