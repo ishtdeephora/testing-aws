@@ -6,8 +6,8 @@ var path = require('path'),
 module.exports = {
 	app: {
 		title: 'Dan Mindru',
-		description: 'Dan Mindru\'s portfolio with a pinch of salt.',
-		keywords: 'dan, mindru, mindrudan, portfolio'
+		description: 'Developing and designing web and mobile stuff at fadeit.',
+		keywords: 'dan, mindru, mindrudan'
 	},
 	db: process.env.MONGOHQ_URL || process.env.MONGOLAB_URI,
 	root: rootPath,
